@@ -37,14 +37,14 @@ public class AssertsTest {
             Asserts.INSTANCE.isNotEmpty(null);
             assertTrue(false);
         } catch (AssertionError ae){
-            assertEquals(Asserts.INSTANCE.UNEXPECTED_NULL, ae.getMessage());
+            assertEquals(Asserts.UNEXPECTED_NULL, ae.getMessage());
         }
 
         try {
             Asserts.INSTANCE.isNotEmpty(Asserts.EMPTY_STRING);
             assertTrue(false);
         } catch (AssertionError ae){
-            assertEquals(Asserts.INSTANCE.UNEXPECTED_EMPTY_STRING, ae.getMessage());
+            assertEquals(Asserts.UNEXPECTED_EMPTY_STRING, ae.getMessage());
         }
     }
 
